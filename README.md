@@ -1,2 +1,2 @@
 # rabbit-mq
-Projects about RabbitMQ
+Some projects made for learning about RabbitMQ
