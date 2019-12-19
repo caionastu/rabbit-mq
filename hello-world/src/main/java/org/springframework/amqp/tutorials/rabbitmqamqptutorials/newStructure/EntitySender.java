@@ -1,25 +1,22 @@
-package org.springframework.amqp.tutorials.rabbitmqamqptutorials.tut1;
+package org.springframework.amqp.tutorials.rabbitmqamqptutorials.newStructure;
 
 import org.springframework.amqp.core.Queue;
+import org.springframework.amqp.core.TopicExchange;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 
-public class Tut1Sender {
-
-    private int count = 0;
+public class EntitySender {
 
     @Autowired
     private RabbitTemplate rabbitTemplate;
 
     @Autowired
-    private Queue queue;
+    private TopicExchange topicExchange;
 
     @Scheduled(fixedDelay = 100, initialDelay = 500)
     public void send() {
-        count++;
-        String message = count + " Hello World";
-        this.rabbitTemplate.convertAndSend(queue.getName(), message);
-        System.out.println(" [" + count + "] Sent '" + message + "' to queue " + queue.getName());
+        String message = "Hello World";
+        this.rabbitTemplate.convertAndSend(topicExchange.getName(), "test.from.client", message);
     }
 }
