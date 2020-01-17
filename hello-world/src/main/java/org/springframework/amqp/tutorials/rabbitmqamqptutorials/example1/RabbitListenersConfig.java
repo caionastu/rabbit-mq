@@ -1,4 +1,4 @@
-package org.springframework.amqp.tutorials.rabbitmqamqptutorials.newStructure;
+package org.springframework.amqp.tutorials.rabbitmqamqptutorials.example1;
 
 import org.springframework.amqp.core.*;
 import org.springframework.beans.factory.annotation.Autowired;

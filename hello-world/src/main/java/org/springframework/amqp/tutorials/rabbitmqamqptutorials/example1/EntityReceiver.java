@@ -1,4 +1,4 @@
-package org.springframework.amqp.tutorials.rabbitmqamqptutorials.newStructure;
+package org.springframework.amqp.tutorials.rabbitmqamqptutorials.example1;
 
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.context.annotation.DependsOn;
